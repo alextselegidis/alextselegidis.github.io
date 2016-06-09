@@ -21,6 +21,7 @@
     "cssnano": "^3.7.0",
     "gulp": "^3.9.1",
     "gulp-postcss": "^6.1.1",
+    "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.6.0",
     "precss": "^1.4.0"
   }

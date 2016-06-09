@@ -1,14 +1,20 @@
-const gulp = require('gulp'); 
+var gulp = require('gulp'); 
+var rename = require('gulp-rename'); 
 
 gulp.task('css', function() {
     var postcss    = require('gulp-postcss');
     var sourcemaps = require('gulp-sourcemaps');
 
-    return gulp.src('src/**/*.css')
+    return gulp.src('styles.pcss')
         .pipe(sourcemaps.init())
-        .pipe(postcss([ require('autoprefixer'), require('precss') ]))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('build/'));
+        .pipe(postcss([ 
+            require('autoprefixer'), 
+            require('precss'),
+            require('cssnano')
+        ]))
+        .pipe(sourcemaps.write())
+        .pipe(rename('styles.css'))
+        .pipe(gulp.dest('.'));
 });
 
 gulp.task('watch', function() {
