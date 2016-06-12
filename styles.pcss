@@ -1,9 +1,13 @@
 @import 'node_modules/skeleton-css/css/normalize.css';
 @import 'node_modules/skeleton-css/css/skeleton.css';
 
+/* Variables */
+
 $primary-color: #0090AC;
-$secondary-color: #111;
+$secondary-color: #09B974;
 $border-color: #D6D5D5;
+
+/* General */
 
 .u-text-left {
     text-align: left;
@@ -17,30 +21,77 @@ $border-color: #D6D5D5;
     text-align: center;
 }
 
- /* Mobile first queries */
+section { 
+    margin: 50px 0;
+}
+
+/* Mobile first queries */
 
 header {
     padding: 10px 0;
     border-bottom: 1px solid $border-color;
+
+    img {
+        width: 32px; 
+        height: auto;
+    }
+
+    nav {
+        a {
+            color: $primary-color; 
+            text-decoration: none; 
+            margin-right: 10px;
+
+            &:hover {
+                color: color($primary-color lightness(70%));
+            }
+        }
+    }
 }
 
 #landing {
+    padding: 50px 0;
+
     h1 {
         line-height: 2;
     }
 }
 
- /* Larger than mobile */
- @media (min-width: 400px) {}
+#about {
 
- /* Larger than phablet */
- @media (min-width: 550px) {}
+}
 
- /* Larger than tablet */
- @media (min-width: 750px) {}
+#things {
+    margin-left: -20px; 
+    margin-right: -20px;
+    padding: 20px;
+    background: $primary-color;
+    color: white;
+}
 
- /* Larger than desktop */
- @media (min-width: 1000px) {}
+#work {
 
- /* Larger than Desktop HD */
- @media (min-width: 1200px) {}
+}
+
+#hire-me {
+
+}
+
+footer {
+    
+}
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
