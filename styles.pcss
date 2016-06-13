@@ -6,6 +6,7 @@
 $primary-color: #0090AC;
 $secondary-color: #09B974;
 $border-color: #D6D5D5;
+$text-color: #222;
 
 /* General */
 
@@ -78,7 +79,26 @@ header {
 }
 
 footer {
-    
+    color: color($text-color lightness(50%));
+
+    > div {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .links {
+        div {
+            width: 100%;
+
+            a {
+                text-decoration: none;
+
+                img {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
 }
 
 /* Larger than mobile */
