@@ -8,6 +8,11 @@ $secondary-color: #09B974;
 $border-color: #ECECEC;
 $text-color: #FFF;
 
+$landing-bg-color: $primary-color; 
+$about-bg-color: #0AC3AF;
+$work-bg-color: #0A74C3;
+$hire-me-bg-color: #112233;
+
 /* General */
 
 *  {
@@ -48,7 +53,7 @@ html, body {
 #about:target section.landing, 
 #work:target section.landing,
 #hire-me:target section.landing {
-  background: black;
+    background: black;
 }
 
 /* Mobile first queries */
@@ -97,7 +102,7 @@ section {
 
     &.landing {
         left: 0;
-        background: darkslateblue;
+        background: $landing-bg-color;
 
         h1 {
             line-height: 2;
@@ -105,7 +110,7 @@ section {
     }
 
     &.about {
-        background: tomato;
+        background: $about-bg-color;
 
         p {
             img {
@@ -116,11 +121,11 @@ section {
     }
 
     &.work {
-        background: gold;
+        background: $work-bg-color;
     }
 
     &.hire-me {
-        background: deeppink;
+        background: $hire-me-bg-color;
     }
 
 }
