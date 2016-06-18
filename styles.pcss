@@ -5,10 +5,14 @@
 
 $primary-color: #0090AC;
 $secondary-color: #09B974;
-$border-color: #D6D5D5;
-$text-color: #222;
+$border-color: #ECECEC;
+$text-color: #FFF;
 
 /* General */
+
+*  {
+    box-sizing: border-box;
+}
 
 .u-text-left {
     text-align: left;
@@ -22,59 +26,102 @@ $text-color: #222;
     text-align: center;
 }
 
-section { 
-    margin: 50px 0;
+html, body { 
+    width: 100%; 
+    height: 100%;
+    margin: 0;
+    padding: 0; 
+    color: $text-color;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* CSS Navigation */
+
+#about:target section.about,
+#work:target section.work,
+#hire-me:target section.hire-me {
+    transform: translateX(-200%);
+    transition-delay: .4s !important;
+}
+
+#about:target section.landing, 
+#work:target section.landing,
+#hire-me:target section.landing {
+  background: black;
 }
 
 /* Mobile first queries */
 
 header {
-    padding: 10px 0;
-    border-bottom: 1px solid $border-color;
-
-    img {
-        width: 32px; 
-        height: auto;
-    }
+    border-bottom: 3px solid $border-color;
 
     nav {
+        overflow: auto; 
+
         a {
+            display: inline-block;
+            width: 25%;
+            height: 55px;
+            padding: 15px;
+            overflow: hidden;
+            float: left;
+            border-right: 1px solid $border-color;
             color: $primary-color; 
             text-decoration: none; 
-            margin-right: 10px;
+            text-align: center;
 
             &:hover {
                 color: color($primary-color lightness(70%));
+            }
+
+            &:last-child {
+                border-right: none;
+            }
+
+            img {
+                width: 32px; 
+                height: auto;
             }
         }
     }
 }
 
-#landing {
-    padding: 50px 0;
+section {
+    position: absolute;
+    left: 200%;
+    width: 100%;
+    min-height: 100%;
+    padding: 10%;
+    transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
 
-    h1 {
-        line-height: 2;
+    &.landing {
+        left: 0;
+        background: darkslateblue;
+
+        h1 {
+            line-height: 2;
+        }
     }
-}
 
-#about {
+    &.about {
+        background: tomato;
 
-}
+        p {
+            img {
+                margin: 15px; 
+                width: 100px;
+            }
+        }
+    }
 
-#things {
-    margin-left: -20px; 
-    margin-right: -20px;
-    padding: 20px;
-    background: $primary-color;
-    color: white;
-}
+    &.work {
+        background: gold;
+    }
 
-#work {
-
-}
-
-#hire-me {
+    &.hire-me {
+        background: deeppink;
+    }
 
 }
 
