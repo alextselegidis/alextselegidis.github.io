@@ -46,10 +46,6 @@ a {
     text-decoration: none;
 }
 
-::-webkit-scrollbar {
-      /* width: 15px; */
-}
-
 /* CSS Navigation */
 
 #about:target section.about,
@@ -86,12 +82,12 @@ a {
 header {
     position: absolute;
     width: 100vw;
-    padding: 0 20px;
+    padding: 0 6vw;
     z-index: 1000;
 
     .logo {
         display: block;
-        padding: 15px;
+        padding: 15px 10px 15px 0;
         float: left;
 
         img {
@@ -107,7 +103,7 @@ header {
         a {
             display: inline-block;
             height: 55px;
-            padding: 15px;
+            padding: 15px 10px;
             overflow: hidden;
             float: left;
             color: $text-color; 
@@ -134,7 +130,7 @@ section {
 
     .wrapper {
         height: 100vh; 
-        padding: 80px 10% 10% 10%;  /* 80px stands for header's height plus 20px */
+        padding: 80px 8vw 8vw 8vw;  /* 80px stands for header's height plus 20px */
         overflow-x: hidden;
         overflow-y: auto;
 
@@ -190,7 +186,7 @@ section {
         background: $about-bg-color;
         
         .wrapper:before {
-            background: linear-gradient(to bottom, color($about-bg-color a(70%)) 45%, rgba(0, 0, 0, 0) 100%);
+            background: linear-gradient(to bottom, color($about-bg-color a(80%)) 45%, rgba(0, 0, 0, 0) 100%);
         }
 
         a {
@@ -209,7 +205,7 @@ section {
         background: $work-bg-color;
 
         .wrapper:before {
-            background: linear-gradient(to bottom, color($work-bg-color a(70%)) 45%, rgba(0, 0, 0, 0) 100%);
+            background: linear-gradient(to bottom, color($work-bg-color a(80%)) 45%, rgba(0, 0, 0, 0) 100%);
         }
 
         a {
@@ -221,7 +217,7 @@ section {
         background: $hire-me-bg-color;
 
         .wrapper:before {
-            background: linear-gradient(to bottom, color($hire-me-bg-color a(70%)) 45%, rgba(0, 0, 0, 0) 100%);
+            background: linear-gradient(to bottom, color($hire-me-bg-color a(80%)) 45%, rgba(0, 0, 0, 0) 100%);
         }
 
         a {
@@ -232,16 +228,61 @@ section {
 }
 
 /* Larger than mobile */
-@media (min-width: 400px) {}
+@media (min-width: 400px) {
+    header {
+        .logo {
+            padding: 15px 15px 15px 0;
+        }
+
+        nav a {
+            padding: 15px;
+        }
+    }
+}
 
 /* Larger than phablet */
-@media (min-width: 550px) {}
+@media (min-width: 550px) {
+    header {
+        .logo {
+            padding: 15px 20px 15px 0;
+        }
+
+        nav a {
+            padding: 15px 20px;
+        }
+    }
+
+    section.landing h1:first-child {
+        margin-top: 5vh;
+    }
+}
 
 /* Larger than tablet */
-@media (min-width: 750px) {}
+@media (min-width: 750px) {
+    section.landing h1:first-child {
+        margin-top: 8vh;
+    }
+}
 
 /* Larger than desktop */
-@media (min-width: 1000px) {}
+@media (min-width: 1000px) {
+    section.landing h1:first-child {
+        margin-top: 15vh;
+    }
+
+    header {
+        max-width: 1000px;
+        margin: 0 calc((100vw - 1000px) / 2);
+        padding: 0;
+    }
+
+    section .wrapper > .row {
+        max-width: 1000px;
+        margin: auto;
+    }
+}
 
 /* Larger than Desktop HD */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    
+}
