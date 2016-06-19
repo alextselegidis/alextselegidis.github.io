@@ -153,6 +153,10 @@ section {
         left: 0;
         text-align: center;
 
+        .wrapper:before {
+            background: linear-gradient(to bottom, $primary-color 0%, rgba(0, 0, 0, 0) 100%);
+        }
+
         h1 {
             font-size: 3.5rem;
             line-height: 2;
@@ -186,7 +190,7 @@ section {
         background: $about-bg-color;
         
         .wrapper:before {
-            background: $about-bg-color;
+            background: linear-gradient(to bottom, color($about-bg-color a(70%)) 45%, rgba(0, 0, 0, 0) 100%);
         }
 
         a {
@@ -205,7 +209,7 @@ section {
         background: $work-bg-color;
 
         .wrapper:before {
-            background: $work-bg-color;
+            background: linear-gradient(to bottom, color($work-bg-color a(70%)) 45%, rgba(0, 0, 0, 0) 100%);
         }
 
         a {
@@ -217,7 +221,7 @@ section {
         background: $hire-me-bg-color;
 
         .wrapper:before {
-            background: $hire-me-bg-color;
+            background: linear-gradient(to bottom, color($hire-me-bg-color a(70%)) 45%, rgba(0, 0, 0, 0) 100%);
         }
 
         a {
