@@ -4,14 +4,14 @@
 /* Variables */
 
 $primary-color: #0090AC;
-$secondary-color: #09B974;
+$secondary-color: #3DE5BE;
 $border-color: #ECECEC;
 $text-color: #FFF;
 
 $landing-bg-color: $primary-color; 
-$about-bg-color: #0AC3AF;
+$about-bg-color: #0BC188;
 $work-bg-color: #0A74C3;
-$hire-me-bg-color: #112233;
+$hire-me-bg-color: #C10B42;
 
 /* General */
 
@@ -36,9 +36,14 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0; 
+    background: linear-gradient(to bottom, $landing-bg-color 0%, $secondary-color 100%);
     color: $text-color;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* CSS Navigation */
@@ -53,34 +58,42 @@ html, body {
 #about:target section.landing,
 #work:target section.landing,
 #hire-me:target section.landing {
-    h1 {
-        -webkit-filter: blur(2px);
+    * {
+        transition: all .4s linear;
+        filter: blur(2px);
     }
-}
-
-#about:target section.landing, 
-#work:target section.landing,
-#hire-me:target section.landing {
-    background: black;
 }
 
 /* Mobile first queries */
 
 header {
-    border-bottom: 3px solid $border-color;
+    position: absolute;
+    width: 100vw;
+    padding: 0 20px;
+    z-index: 1000;
+
+    .logo {
+        display: block;
+        padding: 15px;
+        float: left;
+
+        img {
+            width: 32px; 
+            height: auto;
+        }
+    }
 
     nav {
-        overflow: auto; 
+        overflow: auto;
+        float: right; 
 
         a {
             display: inline-block;
-            width: 25%;
             height: 55px;
             padding: 15px;
             overflow: hidden;
             float: left;
-            border-right: 1px solid $border-color;
-            color: $primary-color; 
+            color: $text-color; 
             text-decoration: none; 
             text-align: center;
 
@@ -91,11 +104,6 @@ header {
             &:last-child {
                 border-right: none;
             }
-
-            img {
-                width: 32px; 
-                height: auto;
-            }
         }
     }
 }
@@ -105,20 +113,48 @@ section {
     left: 200%;
     width: 100%;
     min-height: 100%;
-    padding: 10%;
+    padding: 80px 10% 10% 10%; /* 60px stands for header's height */
     transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
 
     &.landing {
         left: 0;
-        background: $landing-bg-color;
+        text-align: center;
 
         h1 {
+            font-size: 3.5rem;
             line-height: 2;
+            margin-bottom: 4rem;
+        }
+
+        footer {
+            > div {
+                margin-bottom: 15px;
+                overflow: auto;
+            }
+
+            .links {
+                div {
+                    width: 100%;
+
+                    a {
+                        text-decoration: none;
+
+                        img {
+                            margin-right: 20px;
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
         }
     }
 
     &.about {
         background: $about-bg-color;
+
+        a {
+            color: color($about-bg-color lightness(20%)); 
+        }
 
         p {
             img {
@@ -130,35 +166,20 @@ section {
 
     &.work {
         background: $work-bg-color;
+
+        a {
+            color: color($work-bg-color lightness(70%)); 
+        }
     }
 
     &.hire-me {
         background: $hire-me-bg-color;
-    }
 
-}
-
-footer {
-    color: color($text-color lightness(50%));
-
-    > div {
-        margin-bottom: 15px;
-        text-align: center;
-    }
-
-    .links {
-        div {
-            width: 100%;
-
-            a {
-                text-decoration: none;
-
-                img {
-                    margin-right: 20px;
-                }
-            }
+        a {
+            color: color($hire-me-bg-color lightness(70%)); 
         }
     }
+
 }
 
 /* Larger than mobile */
