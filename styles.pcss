@@ -32,8 +32,8 @@ $hire-me-bg-color: #C10B42;
 }
 
 html, body { 
-    width: 100%; 
-    height: 100%;
+    width: 100vw; 
+    min-height: 100vh;
     margin: 0;
     padding: 0; 
     background: linear-gradient(to bottom, $landing-bg-color 0%, $secondary-color 100%);
@@ -55,13 +55,26 @@ a {
     transition-delay: .4s !important;
 }
 
+#about:target a[href="#about"] {
+    color: color($about-bg-color lightness(20%)); 
+    transition-delay: .7s;
+}
+
+#work:target a[href="#work"] {
+    color: color($work-bg-color lightness(70%));
+    transition-delay: .7s;
+}
+
+#hire-me:target a[href="#hire-me"] {
+    color: color($hire-me-bg-color lightness(70%)); 
+    transition-delay: .7s;
+}
+
 #about:target section.landing,
 #work:target section.landing,
 #hire-me:target section.landing {
-    * {
-        transition: all .4s linear;
-        filter: blur(2px);
-    }
+    filter: blur(2px);
+    transition: filter .4s;
 }
 
 /* Mobile first queries */
@@ -98,7 +111,7 @@ header {
             text-align: center;
 
             &:hover {
-                color: color($primary-color lightness(70%));
+                color: inherit;
             }
 
             &:last-child {
@@ -111,10 +124,17 @@ header {
 section {
     position: absolute;
     left: 200%;
-    width: 100%;
-    min-height: 100%;
-    padding: 80px 10% 10% 10%; /* 60px stands for header's height */
+    width: 100vw;
+    min-height: 100vh;
+    padding-top: 60px; /* 60px stands for header's height */
     transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
+
+    .wrapper {
+        height: calc(100vh - 60px); 
+        padding: 10%; 
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
 
     &.landing {
         left: 0;
