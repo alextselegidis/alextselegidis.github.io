@@ -46,6 +46,10 @@ a {
     text-decoration: none;
 }
 
+::-webkit-scrollbar {
+      /* width: 15px; */
+}
+
 /* CSS Navigation */
 
 #about:target section.about,
@@ -126,14 +130,23 @@ section {
     left: 200%;
     width: 100vw;
     min-height: 100vh;
-    padding-top: 60px; /* 60px stands for header's height */
     transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
 
     .wrapper {
-        height: calc(100vh - 60px); 
-        padding: 10%; 
+        height: 100vh; 
+        padding: 80px 10% 10% 10%;  /* 80px stands for header's height plus 20px */
         overflow-x: hidden;
         overflow-y: auto;
+
+        &:before {
+            content: ''; 
+            position: absolute; 
+            top: 0;
+            left: 0;
+            height: 60px;
+            width: calc(100vw - 15px);
+            background: none;
+        }
     }
 
     &.landing {
@@ -171,6 +184,10 @@ section {
 
     &.about {
         background: $about-bg-color;
+        
+        .wrapper:before {
+            background: $about-bg-color;
+        }
 
         a {
             color: color($about-bg-color lightness(20%)); 
@@ -187,6 +204,10 @@ section {
     &.work {
         background: $work-bg-color;
 
+        .wrapper:before {
+            background: $work-bg-color;
+        }
+
         a {
             color: color($work-bg-color lightness(70%)); 
         }
@@ -194,6 +215,10 @@ section {
 
     &.hire-me {
         background: $hire-me-bg-color;
+
+        .wrapper:before {
+            background: $hire-me-bg-color;
+        }
 
         a {
             color: color($hire-me-bg-color lightness(70%)); 
