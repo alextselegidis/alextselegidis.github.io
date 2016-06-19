@@ -208,6 +208,10 @@ section {
         }
     }
 
+    h2 {
+        margin-bottom: 4rem;
+    }
+
     &.landing {
         left: 0;
         text-align: center;
@@ -229,15 +233,18 @@ section {
             }
 
             .links {
-                div {
-                    width: 100%;
+                padding: 5px 0;
 
-                    a {
-                        text-decoration: none;
+                a {
+                    display: inline-block;
 
-                        img {
-                            margin-right: 20px;
-                            opacity: 0.7;
+                    img {
+                        margin-right: 20px;
+                        opacity: 0.7;
+                        transition: all .2s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.1);
                         }
                     }
                 }
@@ -277,14 +284,18 @@ section {
     }
 
     &.hire-me {
-        background: linear-gradient(to bottom, $hire-me-bg-color 0%, #e6bd4a 100%);
+        background: linear-gradient(to bottom, $hire-me-bg-color 0%, #e2c267 100%);
 
         .wrapper:before {
             background: linear-gradient(to bottom, color($hire-me-bg-color a(80%)) 45%, rgba(0, 0, 0, 0) 100%);
         }
 
+        h4 {
+            line-height: 1.6;
+        }
+
         a {
-            color: color($hire-me-bg-color lightness(70%)); 
+            color: color($hire-me-bg-color lightness(25%)); 
         }
     }
 
@@ -337,6 +348,14 @@ section {
         max-width: 1000px;
         margin: 0 calc((100vw - 1000px) / 2);
         padding: 0;
+
+         .logo {
+            padding: 15px 30px 15px 0;
+        }
+
+        nav a {
+            padding: 15px 30px;
+        }
     }
 
     section .wrapper > .row {
