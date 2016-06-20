@@ -6,12 +6,11 @@
 $primary-color: #0090AC;
 $secondary-color: #3DE5BE;
 $border-color: #ECECEC;
-$text-color: #FFF;
-
-$landing-bg-color: $primary-color; 
+$text-color: #FFF; 
 $about-bg-color: #0BC188;
 $work-bg-color: #0A74C3;
-$hire-me-bg-color: #C10B42;
+$hire-me-bg-color: #673ab7;
+$final-bg-color: #F44336;
 
 /* General */
 
@@ -36,7 +35,7 @@ html, body {
     min-height: 100vh;
     margin: 0;
     padding: 0; 
-    background: linear-gradient(to bottom, $landing-bg-color 0%, $secondary-color 100%);
+    background: linear-gradient(to bottom, $primary-color 0%, $secondary-color 100%);
     color: $text-color;
     overflow-x: hidden;
     overflow-y: auto;
@@ -79,10 +78,6 @@ body {
         animation: background-shapes-1 1200s  linear infinite;
         z-index: -10;
     }
-}
-
-a {
-    text-decoration: none;
 }
 
 /* Animations */
@@ -193,7 +188,7 @@ section {
 
     .wrapper {
         height: 100vh; 
-        padding: 80px 8vw 8vw 8vw;  /* 80px stands for header's height plus 20px */
+        padding: 100px 8vw 8vw 8vw;  /* 100px stands for header's height plus 40px */
         overflow-x: hidden;
         overflow-y: auto;
 
@@ -210,6 +205,11 @@ section {
 
     h2 {
         margin-bottom: 4rem;
+    }
+
+    a {
+        color: $text-color;
+        font-weight: bold; 
     }
 
     &.landing {
@@ -253,38 +253,41 @@ section {
     }
 
     &.about {
-        background: linear-gradient(to bottom, $about-bg-color 0%, #2db5ae 100%);
+        background: linear-gradient(to bottom, $about-bg-color 0%, color($work-bg-color a(85%)) 100%);
         
         .wrapper:before {
             background: linear-gradient(to bottom, color($about-bg-color a(80%)) 45%, rgba(0, 0, 0, 0) 100%);
         }
 
-        a {
-            color: color($about-bg-color lightness(20%)); 
-        }
-
         p {
+            margin-bottom: 7rem;
+            max-width: 760px;
+            line-height: 2;
+
             img {
-                margin: 15px; 
                 width: 100px;
+
+                &.u-pull-left {
+                    margin: 10px 25px 20px 0;
+                }
+
+                &.u-pull-right {
+                    margin: 10px 0 20px 25px;
+                }
             }
         }
     }
 
     &.work {
-        background: linear-gradient(to bottom, $work-bg-color 0%, #7d3fa5 100%);
+        background: linear-gradient(to bottom, $work-bg-color 0%, color($hire-me-bg-color a(85%)) 100%);
 
         .wrapper:before {
             background: linear-gradient(to bottom, color($work-bg-color a(80%)) 45%, rgba(0, 0, 0, 0) 100%);
         }
-
-        a {
-            color: color($work-bg-color lightness(70%)); 
-        }
     }
 
     &.hire-me {
-        background: linear-gradient(to bottom, $hire-me-bg-color 0%, #e2c267 100%);
+        background: linear-gradient(to bottom, $hire-me-bg-color 0%, color($final-bg-color a(85%)) 100%);
 
         .wrapper:before {
             background: linear-gradient(to bottom, color($hire-me-bg-color a(80%)) 45%, rgba(0, 0, 0, 0) 100%);
@@ -293,11 +296,7 @@ section {
         h4 {
             line-height: 1.6;
         }
-
-        a {
-            color: color($hire-me-bg-color lightness(25%)); 
-        }
-    }
+    } 
 
 }
 
@@ -345,7 +344,7 @@ section {
     }
 
     header {
-        max-width: 1000px;
+        max-width: 960px;
         margin: 0 calc((100vw - 1000px) / 2);
         padding: 0;
 
@@ -359,7 +358,7 @@ section {
     }
 
     section .wrapper > .row {
-        max-width: 1000px;
+        max-width: 960px;
         margin: auto;
     }
 }
