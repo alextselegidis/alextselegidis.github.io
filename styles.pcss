@@ -117,7 +117,7 @@ body {
 #about:target section.about,
 #work:target section.work,
 #hire-me:target section.hire-me {
-    transform: translateX(-200%);
+    transform: translateY(200%);
     transition-delay: .4s !important;
 }
 
@@ -181,10 +181,10 @@ header {
 
 section {
     position: absolute;
-    left: 200%;
+    top: -200%;
     width: 100vw;
     min-height: 100vh;
-    transition: all .6s cubic-bezier(.5, .2, .2, 1.1);
+    transition: all .6s cubic-bezier(.5, .2, .2, 1);
 
     .wrapper {
         height: 100vh; 
@@ -213,7 +213,8 @@ section {
     }
 
     &.landing {
-        left: 0;
+        top: 0;
+        /* left: 0; */
         text-align: center;
 
         .wrapper:before {
