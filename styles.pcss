@@ -198,7 +198,7 @@ section {
             top: 0;
             left: 0;
             height: 60px;
-            width: calc(100vw - 15px);
+            width: calc(100vw - 20px);
             background: none;
         }
     }
@@ -210,6 +210,11 @@ section {
     a {
         color: $text-color;
         font-weight: bold; 
+        transition: color .2s linear;
+
+        &:hover {
+            color: color($text-color lightness(85%));
+        }
     }
 
     &.landing {
@@ -254,14 +259,14 @@ section {
     }
 
     &.about {
-        background: linear-gradient(to bottom, $about-bg-color 0%, color($work-bg-color a(85%)) 100%);
+        background: linear-gradient(to bottom, $about-bg-color 0%, $work-bg-color 100%);
         
         .wrapper:before {
             background: linear-gradient(to bottom, color($about-bg-color a(80%)) 45%, rgba(0, 0, 0, 0) 100%);
         }
 
         p {
-            margin-bottom: 7rem;
+            margin-bottom: 10rem;
             max-width: 760px;
             line-height: 2;
 
@@ -269,18 +274,34 @@ section {
                 width: 100px;
 
                 &.u-pull-left {
-                    margin: 10px 25px 20px 0;
+                    margin: 6px 25px 20px 0;
                 }
 
                 &.u-pull-right {
-                    margin: 10px 0 20px 25px;
+                    margin: 6px 0 20px 25px;
                 }
+            }
+        }
+
+        .things-i-love {
+            clear: both; 
+            max-width: 600px;
+            margin: auto;
+            overflow: auto; 
+
+            h2 {
+                text-align: center;
+            }
+
+            img {
+                float: left; 
+                margin: 10px; 
             }
         }
     }
 
     &.work {
-        background: linear-gradient(to bottom, $work-bg-color 0%, color($hire-me-bg-color a(85%)) 100%);
+        background: linear-gradient(to bottom, $work-bg-color 0%, $hire-me-bg-color 100%);
 
         .wrapper:before {
             background: linear-gradient(to bottom, color($work-bg-color a(80%)) 45%, rgba(0, 0, 0, 0) 100%);
@@ -288,7 +309,7 @@ section {
     }
 
     &.hire-me {
-        background: linear-gradient(to bottom, $hire-me-bg-color 0%, color($final-bg-color a(85%)) 100%);
+        background: linear-gradient(to bottom, $hire-me-bg-color 0%, $final-bg-color 100%);
 
         .wrapper:before {
             background: linear-gradient(to bottom, color($hire-me-bg-color a(80%)) 45%, rgba(0, 0, 0, 0) 100%);
