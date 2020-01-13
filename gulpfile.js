@@ -59,7 +59,6 @@ gulp.task('serve', function(async) {
 
 gulp.task('watch', function () {
     gulp.watch('styles.pcss', gulp.series('styles'));
-    gulp.watch('images/*.svg', gulp.series('svg'));
 });
 
 gulp.task('dev', gulp.parallel('serve', 'watch'));
