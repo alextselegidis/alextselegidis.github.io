@@ -55,3 +55,8 @@ Note: If you're using Linux Bash for Windows, [see this guide](https://www.howto
 
 Code Licensed Under [GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) | Content Under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
 
+---
+
+> Website [alextselegidis.com](https://alextselegidis.com) &nbsp;&middot;&nbsp;
+> GitHub [@alextselegidis](https://github.com/alextselegidis) &nbsp;&middot;&nbsp;
+> Twitter [@alextselegidis](https://twitter.com/AlexTselegidis)
