@@ -1,10 +1,11 @@
 {
   "name": "alextselegidis.github.io",
-  "version": "2.0.0",
-  "description": "Personal Website",
+  "version": "2.1.0",
+  "description": "Personal website, made entirely with CSS (no JavaScript used).",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp dev",
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
@@ -16,18 +17,20 @@
     "url": "https://github.com/alextselegidis/alextselegidis.github.io/issues"
   },
   "homepage": "https://github.com/alextselegidis/alextselegidis.github.io#readme",
+  "dependencies": {
+    "skeleton-css": "^2.0.4"
+  },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "cssnano": "^3.7.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
+    "gulp-connect": "^5.7.0",
     "gulp-postcss": "^6.1.1",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-svgmin": "^1.2.4",
+    "opener": "^1.5.1",
     "postcss-color-function": "^2.0.1",
     "precss": "^1.4.0"
-  },
-  "dependencies": {
-    "skeleton-css": "^2.0.4"
   }
 }
