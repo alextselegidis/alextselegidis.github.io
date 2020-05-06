@@ -254,16 +254,17 @@ section {
         .featured-link {
             border-bottom: none;
             overflow: auto;
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.60);
             display: inline-block;
             padding: 10px 20px;
             border-radius: 50px;
             text-align: left;
+            color: #556c73;
 
             h6 {
                 display: inline-block;
                 margin-bottom: 0;
-                font-weight: bold;
+                font-weight: 700;
                 font-size: 14px;
                 line-height: 1.2;
 
@@ -285,10 +286,6 @@ section {
     &.landing {
         top: 0;
         text-align: center;
-
-        .wrapper:before {
-            background: linear-gradient(to bottom, $primary-color 0%, rgba(0, 0, 0, 0) 100%);
-        }
 
         h1 {
             font-size: 2.5rem;
@@ -334,10 +331,6 @@ section {
     &.about {
         background: linear-gradient(to bottom, $about-bg-color 0%, $work-bg-color 100%);
 
-        .wrapper:before {
-            background: linear-gradient(to bottom, color($about-bg-color a(80%)) 45%, rgba(0, 0, 0, 0) 100%);
-        }
-
         p {
             max-width: 761px;
             margin-bottom: 10rem;
@@ -380,10 +373,6 @@ section {
     &.work {
         background: linear-gradient(to bottom, $work-bg-color 0%, $hire-me-bg-color 100%);
 
-        .wrapper:before {
-            background: linear-gradient(to bottom, color($work-bg-color a(80%)) 45%, rgba(0, 0, 0, 0) 100%);
-        }
-
         img {
             width: 90%;
             margin-bottom: 10px;
@@ -393,10 +382,6 @@ section {
 
     &.hire-me {
         background: linear-gradient(to bottom, $hire-me-bg-color 0%, $final-bg-color 100%);
-
-        .wrapper:before {
-            background: linear-gradient(to bottom, color($hire-me-bg-color a(80%)) 45%, rgba(0, 0, 0, 0) 100%);
-        }
 
         h5 {
             line-height: 1.8;
