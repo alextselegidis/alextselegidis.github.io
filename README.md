@@ -4,7 +4,7 @@
             <img src="https://raw.githubusercontent.com/alextselegidis/alextselegidis.github.io/master/logo.png" alt="Alex Tselegidis" width="203">
         </a>
         <br>
-        Personal Website (CSS-only implementation)
+        Personal Website (CSS-only Implementation)
     <br>
 </h1>
 
@@ -12,6 +12,11 @@
     Welcome to my personal website repository, holding the code behind 
     <a href="https://alextselegidis.com">alextselegidis.com</a>
 </h4>
+
+<p align="center">
+  <img alt="GitHub" src="https://img.shields.io/github/license/alextselegidis/alextselegidis.github.io?style=for-the-badge">
+  <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/alextselegidis/alextselegidis.github.io?style=for-the-badge">
+</p>
 
 <p align="center">
   <a href="#about">About</a> •
